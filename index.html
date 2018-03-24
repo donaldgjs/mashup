@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>    
+        <title>Mashup Charts, Youtube, Maps</title>
+        <meta charset="UTF-8" />          
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <img src="img/youtube.png">
+                <img src="img/charts.png">
+                <img src="img/maps.png">
+                <h1><a href="index.html">Mashup</a></h1>
+            </div>
+        </header>
+        <div class="container">
+            <section class="main row">
+                <form class="form-inline" action="#">
+                    <input type="text" id="search" placeholder="Busqueda..." autocomplete="off" class="form-control"/>
+                    <input type="number" id="num" placeholder="Total de resultados..." class="form-control" min="1" max="50">
+                    <input type="submit" value="Search" class="form-control btn btn-primary">
+                </form>
+                <br>
+            </section>
+
+            <section class="row">
+                <article class="col-md-9 principal div form-inline" id="results">
+                    <!--div class="pagination">
+                      <a href="#">1</a>
+                      <a href="#">2</a>
+                      <a href="#">3</a>
+                      <a href="#">4</a>
+                      <a href="#">5</a>
+                    </div-->
+                </article>
+                <aside class="col-md-3 principal">
+                    <div class="form-inline">
+                            <select id="opt" class="form-control">
+                                <option value="view">View</option>
+                                <option value="likes">Likes</option>
+                                <option value="dislikes">Dislikes</option>
+                                <option value="comment">Comment</option>
+                            </select>
+                            <input type="submit" value="Graficar" id="boton_graficar" class="form-control btn btn-primary" disabled>
+                    </div>
+                    <div id="grafica" class="graf" style="visibility:hidden;"></div>
+                </aside>
+            </section>
+            <div class="row mapa">
+                <div id="map"></div>
+            </div>
+        </div>
+        
+
+        <!--footer>
+            <div class="container">
+              Donaldo Garcia Justiniano
+            </div>
+        </footer-->
+        
+        <!-- scripts -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB02HrC6xUJYSCkBis3TNcIQGlHA5vIyt0&callback=initMap"></script>
+        <script src="js/app.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    </body>
+</html>
+
